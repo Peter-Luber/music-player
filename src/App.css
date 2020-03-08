@@ -1,0 +1,105 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5;
+  padding: 0px;
+}
+
+.Player {
+  background-color: #e6e6e6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 500;
+  font-family: Courier, Helvetica, Arial, sans-serif;
+  color: gray;
+  overflow: scroll;
+  width: 300px;
+  min-height: 380px;
+  border-radius: 60px 20px;
+  border: 15px outset lightgray;
+  margin: auto;
+  filter: drop-shadow(0px 0px 20px rgb(155, 155, 155));
+  box-shadow: 0em 0.3em 0.6em 0.1em gray;
+  outline: none;
+}
+
+#accentLine {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 356px;
+  width: 275px;
+  border: 2px solid lightgray;
+  border-radius: 38px 3.8px;
+}
+
+.Player-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 220px;
+  height: 5em;
+  border-radius: 13px;
+  border: 3px inset lightgray;
+  background-color: rgb(255, 255, 255);
+  overflow-x: scroll;
+  font-size: 1.8rem;
+  padding: 0.4em;
+  color: lightgray;
+}
+
+#title {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+#artist {
+  font-size: 1rem;
+}
+
+#playBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50px;
+  border: 4px outset lightgray;
+  background-color: #e1e1e1;
+}
+
+#playBox:active {
+  border: 4px inset lightgray;
+}
+
+#controlButton {
+  margin: auto;
+  filter: brightness(0%) invert(100%);
+}
+
+.Current-track {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 30px;
+  font-size: 1rem;
+  text-align: center;
+  overflow-x: scroll;
+  border: none;
+  border-radius: 4em;
+}

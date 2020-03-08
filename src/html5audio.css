@@ -1,0 +1,13 @@
+#songPlay {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  filter: invert(0%);
+  position: relative;
+  z-index: 100;
+}
+
+#songPause {
+    width: 80%;
+    height: 80%;
+}
