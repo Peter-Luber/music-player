@@ -99,10 +99,9 @@
   justify-content: center;
   align-items: center;
   width: 60%;
-  height: 30px;
+  height: 1em;
   font-size: 2rem;
   text-align: center;
-  overflow-x: scroll;
   border: none;
   border-radius: 4em;
 }
