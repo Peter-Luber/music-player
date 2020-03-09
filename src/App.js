@@ -101,22 +101,54 @@ class App extends React.Component {
   };
 
   endCycle = () => {
-    this.setState(
-      {
-        title: this.state.pop5[this.state.current + 1].title,
-        current: this.state.current + 1,
+    if (this.state.current < 9) {
+      this.setState(
+        {
+          current: this.state.current + 1,
+          button: paused
+        },
+        () => {
+          this.refs.audioRef.load();
+          this.playPause(this.refs.audioRef);
+        }
+      );
+    } else {
+      this.setState({
+        button: paused,
+        title: "",
+        current: 0,
+        artist: "slatt ++🦋"
+      });
+    }
+  };
+
+  backCycle = () => {
+    if (this.state.current > 0) {
+      this.setState(
+        {
+          current: this.state.current - 1,
+          button: paused
+        },
+        () => {
+          this.refs.audioRef.load();
+          this.playPause(this.refs.audioRef);
+        }
+      );
+    } else {
+      this.setState({
+        current: this.state.pop5.length - 1,
         button: paused
-      },
-      () => {
-        this.refs.audioRef.load();
-        this.playPause(this.refs.audioRef);
-      }
-    );
+      });
+    }
   };
 
   keyCtrl = event => {
     if (event.key === " ") {
       this.refs.imgRef.click();
+    } else if (event.key === "ArrowRight") {
+      this.endCycle();
+    } else if (event.key === "ArrowLeft") {
+      this.backCycle();
     }
   };
 
@@ -135,8 +167,12 @@ class App extends React.Component {
           tabIndex="1"
         >
           <div id="accentLine">
-            <div className="Current-track"></div>
-            <div className="Player-header">
+            <div className="Logo">
+              <span role="img" aria-label="slatt++">
+                🦋
+              </span>
+            </div>
+            <div className="Display">
               <div id="title">{this.state.title}</div>
               <div id="artist">{this.state.artist}</div>
             </div>

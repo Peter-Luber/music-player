@@ -45,7 +45,21 @@
   border-radius: 38px;
 }
 
-.Player-header {
+.Logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  height: 1em;
+  font-size: 2rem;
+  text-align: center;
+  border: none;
+  border-radius: 4em;
+  filter: saturate(0) contrast(0.2);
+}
+
+.Display {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -64,10 +78,14 @@
 #title {
   font-size: 1.5rem;
   line-height: 1.5rem;
+  position: fixed;
+  transform: translateY(-20px);
 }
 
 #artist {
   font-size: 1rem;
+  position: fixed;
+  transform: translateY(30px);
 }
 
 #playBox {
@@ -92,15 +110,3 @@
   filter: brightness(0%) invert(100%);
 }
 
-.Current-track {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-  height: 1em;
-  font-size: 2rem;
-  text-align: center;
-  border: none;
-  border-radius: 4em;
-}
