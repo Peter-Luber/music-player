@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import paused from "./img/play.svg";
 import playing from "./img/pause.svg";
+import ff from "./img/ff.svg";
 import nudy from "./midi/pissypamper.mp3";
 import uplifter from "./midi/uplifter.mp3";
 import c1 from "./midi/alotOnMyMind.mp3";
@@ -20,61 +21,61 @@ class App extends React.Component {
     current: 0,
     pop5: [
       {
-        id: 1,
+        id: 0,
         title: "riser",
         artist: "lex luger",
         url: uplifter
       },
       {
-        id: 2,
+        id: 1,
         title: "did it again",
         artist: "playboi carti",
         url: c2
       },
       {
-        id: 3,
+        id: 2,
         title: "alot on my mind",
         artist: "playboi carti",
         url: c1
       },
       {
-        id: 4,
+        id: 3,
         title: "one day",
         artist: "playboi carti",
         url: c3
       },
       {
-        id: 5,
+        id: 4,
         title: "pissy pamper ft. playboi carti",
         artist: "young nudy",
         url: nudy
       },
       {
-        id: 6,
+        id: 5,
         title: "hellcat",
         artist: "playboi carti",
         url: c4
       },
       {
-        id: 7,
+        id: 6,
         title: "feelin nobody",
         artist: "playboi carti",
         url: c5
       },
       {
-        id: 8,
+        id: 7,
         title: "WOAH",
         artist: "playboi carti",
         url: c6
       },
       {
-        id: 9,
+        id: 8,
         title: "can't relate",
         artist: "playboi carti",
         url: c7
       },
       {
-        id: 10,
+        id: 9,
         title: "whole lotta red",
         artist: "playboi carti",
         url: c8
@@ -105,7 +106,9 @@ class App extends React.Component {
       this.setState(
         {
           current: this.state.current + 1,
-          button: paused
+          button: paused,
+          title: this.state.pop5[this.state.current + 1].title,
+          artist: this.state.pop5[this.state.current + 1].artist
         },
         () => {
           this.refs.audioRef.load();
@@ -115,9 +118,9 @@ class App extends React.Component {
     } else {
       this.setState({
         button: paused,
-        title: "",
         current: 0,
-        artist: "slatt ++🦋"
+        title: this.state.pop5[0].title,
+        artist: this.state.pop5[0].artist
       });
     }
   };
@@ -127,7 +130,9 @@ class App extends React.Component {
       this.setState(
         {
           current: this.state.current - 1,
-          button: paused
+          button: paused,
+          title: this.state.pop5[this.state.current - 1].title,
+          artist: this.state.pop5[this.state.current - 1].artist
         },
         () => {
           this.refs.audioRef.load();
@@ -135,10 +140,18 @@ class App extends React.Component {
         }
       );
     } else {
-      this.setState({
-        current: this.state.pop5.length - 1,
-        button: paused
-      });
+      this.setState(
+        {
+          current: this.state.pop5.length - 1,
+          button: paused,
+          title: this.state.pop5[this.state.current].title,
+          artist: this.state.pop5[this.state.current].artist
+        },
+        () => {
+          this.refs.audioRef.load();
+          this.playPause(this.refs.audioRef);
+        }
+      );
     }
   };
 
@@ -176,14 +189,32 @@ class App extends React.Component {
               <div id="title">{this.state.title}</div>
               <div id="artist">{this.state.artist}</div>
             </div>
-            <div id="playBox">
-              <img
-                id="controlButton"
-                ref="imgRef"
-                alt="play/pause button"
-                src={this.state.button}
-                onClick={() => this.playPause(this.refs.audioRef)}
-              ></img>
+            <div id="ctrlBox">
+              <div id="rwBox">
+                <img
+                  id="rw"
+                  alt="rewind"
+                  src={ff}
+                  onClick={() => this.backCycle()}
+                />
+              </div>
+              <div id="playBox">
+                <img
+                  id="controlButton"
+                  ref="imgRef"
+                  alt="play/pause button"
+                  src={this.state.button}
+                  onClick={() => this.playPause(this.refs.audioRef)}
+                />
+              </div>
+              <div id="ffBox">
+                <img
+                  id="ff"
+                  alt="fast forward"
+                  src={ff}
+                  onClick={() => this.endCycle()}
+                />
+              </div>
             </div>
           </div>
         </div>

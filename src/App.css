@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Michroma&display=swap");
+
 .App {
   text-align: center;
   display: flex;
@@ -6,32 +8,31 @@
   align-items: center;
   margin: auto;
   width: 100vw;
-  height: 700px;
-  background-color: #f5f5f5;
+  height: 100%;
   padding: 0px;
-  overflow: scroll;
+  overflow: visible;
+  font-family: "Michroma", Courier, sans-serif;
 }
 
 .Player {
-  background-color: #e6e6e6;
+  background-color: #333333;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   font-size: 4rem;
   font-weight: 500;
-  font-family: Courier, Helvetica, Arial, sans-serif;
   color: gray;
   overflow: scroll;
   width: 300px;
   min-height: 460px;
   border-radius: 60px;
-  border: 15px outset lightgray;
+  border: 15px outset #222222;
   margin: auto;
   margin-top: 100px;
-  filter: drop-shadow(0px 0px 20px rgb(155, 155, 155));
-  box-shadow: 0em 0.3em 0.6em 0.1em gray;
+  box-shadow: 0em 0.3em 0.6em 0.1em rgb(0, 0, 0);
   outline: none;
+  transform: translate3d(0px 0px 100px);
 }
 
 #accentLine {
@@ -39,9 +40,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 435px;
-  width: 275px;
-  border: 2px solid lightgray;
+  height: 440px;
+  width: 280px;
+  border: 2px solid black;
   border-radius: 38px;
 }
 
@@ -64,28 +65,84 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  width: 220px;
+  width: 8em;
   height: 5em;
   border-radius: 13px;
-  border: 3px inset lightgray;
-  background-color: rgb(255, 255, 255);
+  border: 3px inset rgb(99, 99, 99);
+  background-color: rgb(170, 170, 170);
   overflow-x: scroll;
   font-size: 1.8rem;
   padding: 0.4em;
-  color: lightgray;
+  color: #464646;
 }
 
 #title {
   font-size: 1.5rem;
   line-height: 1.5rem;
-  position: fixed;
-  transform: translateY(-20px);
+  position: relative;
+  height: 3em;
 }
 
 #artist {
   font-size: 1rem;
-  position: fixed;
-  transform: translateY(30px);
+  position: relative;
+}
+
+#ctrlBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 250px;
+  height: 100px;
+
+}
+
+#rwBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 40px;
+  border: 2px outset #555555;
+}
+
+#rwBox:active {
+  border: 2px inset #555555;
+}
+
+#rw {
+  width: 50%;
+  height: 50%;
+  border-radius: 40px;
+  border: 1px solid white;
+  padding: 8px;
+  filter: brightness(0%) invert(60%);
+}
+
+#ffBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 40px;
+  border: 2px outset #555555;
+}
+
+#ffBox:active {
+  border: 2px inset #555555;
+}
+
+#ff {
+  width: 50%;
+  height: 50%;
+  border-radius: 40px;
+  border: 1px solid white;
+  transform: rotate(180deg);
+  padding: 8px;
+  filter: brightness(0%) invert(60%);
 }
 
 #playBox {
@@ -97,16 +154,14 @@
   width: 90px;
   height: 90px;
   border-radius: 50px;
-  border: 4px outset lightgray;
-  background-color: #e1e1e1;
+  border: 3px outset #555555;
 }
 
 #playBox:active {
-  border: 4px inset lightgray;
+  border: 3px inset #555555;
 }
 
 #controlButton {
   margin: auto;
-  filter: brightness(0%) invert(100%);
+  filter: brightness(0%) invert(60%);
 }
-
