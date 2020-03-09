@@ -1,2 +1,2 @@
 # music-player
-bespoke react native music/audio player
+simple react native music/audio player with playlist support
