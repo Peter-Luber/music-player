@@ -4,8 +4,14 @@ import paused from "./img/play.svg";
 import playing from "./img/pause.svg";
 import nudy from "./midi/pissypamper.mp3";
 import uplifter from "./midi/uplifter.mp3";
-import carti from "./midi/alotOnMyMind.mp3";
-import carti2 from "./midi/didItAgain.mp3";
+import c1 from "./midi/alotOnMyMind.mp3";
+import c2 from "./midi/didItAgain.mp3";
+import c3 from "./midi/oneDay.mp3";
+import c4 from "./midi/hellcat.mp3";
+import c5 from "./midi/feelinNobody.mp3";
+import c6 from "./midi/WOAH.mp3";
+import c7 from "./midi/cantRelate.mp3";
+import c8 from "./midi/WLR.mp3";
 
 class App extends React.Component {
   state = {
@@ -21,21 +27,57 @@ class App extends React.Component {
       },
       {
         id: 2,
-        title: "pissy pamper ft. playboi carti",
-        artist: "young nudy",
-        url: nudy
+        title: "did it again",
+        artist: "playboi carti",
+        url: c2
       },
       {
         id: 3,
         title: "alot on my mind",
         artist: "playboi carti",
-        url: carti
+        url: c1
       },
       {
         id: 4,
-        title: "did it again",
+        title: "one day",
         artist: "playboi carti",
-        url: carti2
+        url: c3
+      },
+      {
+        id: 5,
+        title: "pissy pamper ft. playboi carti",
+        artist: "young nudy",
+        url: nudy
+      },
+      {
+        id: 6,
+        title: "hellcat",
+        artist: "playboi carti",
+        url: c4
+      },
+      {
+        id: 7,
+        title: "feelin nobody",
+        artist: "playboi carti",
+        url: c5
+      },
+      {
+        id: 8,
+        title: "WOAH",
+        artist: "playboi carti",
+        url: c6
+      },
+      {
+        id: 9,
+        title: "can't relate",
+        artist: "playboi carti",
+        url: c7
+      },
+      {
+        id: 10,
+        title: "whole lotta red",
+        artist: "playboi carti",
+        url: c8
       }
     ]
   };
