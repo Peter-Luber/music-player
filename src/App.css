@@ -6,7 +6,7 @@
   align-items: center;
   margin: auto;
   width: 100vw;
-  height: 100vh;
+  height: 700px;
   background-color: #f5f5f5;
   padding: 0px;
   overflow: scroll;
@@ -29,7 +29,6 @@
   border: 15px outset lightgray;
   margin: auto;
   margin-top: 100px;
-  margin-bottom: 50px;
   filter: drop-shadow(0px 0px 20px rgb(155, 155, 155));
   box-shadow: 0em 0.3em 0.6em 0.1em gray;
   outline: none;
