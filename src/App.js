@@ -190,30 +190,22 @@ class App extends React.Component {
               <div id="artist">{this.state.artist}</div>
             </div>
             <div id="ctrlBox">
-              <div id="rwBox">
-                <img
-                  id="rw"
-                  alt="rewind"
-                  src={ff}
-                  onClick={() => this.backCycle()}
-                />
+              <div id="rwBox" onClick={() => this.backCycle()}>
+                <img id="rw" alt="rewind" src={ff} />
               </div>
-              <div id="playBox">
+              <div
+                id="playBox"
+                onClick={() => this.playPause(this.refs.audioRef)}
+              >
                 <img
-                  id="controlButton"
+                  id="playButton"
                   ref="imgRef"
                   alt="play/pause button"
                   src={this.state.button}
-                  onClick={() => this.playPause(this.refs.audioRef)}
                 />
               </div>
-              <div id="ffBox">
-                <img
-                  id="ff"
-                  alt="fast forward"
-                  src={ff}
-                  onClick={() => this.endCycle()}
-                />
+              <div id="ffBox" onClick={() => this.endCycle()}>
+                <img id="ff" alt="fast forward" src={ff} />
               </div>
             </div>
           </div>

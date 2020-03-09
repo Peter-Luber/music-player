@@ -27,9 +27,10 @@
   width: 300px;
   min-height: 460px;
   border-radius: 60px;
-  border: 15px outset #222222;
+  border: 15px outset #777777;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 70px;
+  margin-bottom: 70px;
   box-shadow: 0em 0.3em 0.6em 0.1em rgb(0, 0, 0);
   outline: none;
   transform: translate3d(0px 0px 100px);
@@ -56,6 +57,7 @@
   font-size: 2rem;
   text-align: center;
   border: none;
+  position: relative;
   border-radius: 4em;
   filter: saturate(0) contrast(0.2);
 }
@@ -68,7 +70,7 @@
   width: 8em;
   height: 5em;
   border-radius: 13px;
-  border: 3px inset rgb(99, 99, 99);
+  border: 3px inset #777777;
   background-color: rgb(170, 170, 170);
   overflow-x: scroll;
   font-size: 1.8rem;
@@ -105,11 +107,11 @@
   width: 60px;
   height: 60px;
   border-radius: 40px;
-  border: 2px outset #555555;
+  border: 2px outset #777777;
 }
 
 #rwBox:active {
-  border: 2px inset #555555;
+  border: 2px inset #777777;
 }
 
 #rw {
@@ -128,11 +130,11 @@
   width: 60px;
   height: 60px;
   border-radius: 40px;
-  border: 2px outset #555555;
+  border: 2px outset #777777;
 }
 
 #ffBox:active {
-  border: 2px inset #555555;
+  border: 2px inset #777777;
 }
 
 #ff {
@@ -154,14 +156,14 @@
   width: 90px;
   height: 90px;
   border-radius: 50px;
-  border: 3px outset #555555;
+  border: 3px outset #777777;
 }
 
 #playBox:active {
-  border: 3px inset #555555;
+  border: 3px inset #777777;
 }
 
-#controlButton {
+#playButton {
   margin: auto;
   filter: brightness(0%) invert(60%);
 }
