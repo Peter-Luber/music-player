@@ -5,6 +5,7 @@ import playing from "./img/pause.svg";
 import nudy from "./midi/pissypamper.mp3";
 import uplifter from "./midi/uplifter.mp3";
 import carti from "./midi/alotOnMyMind.mp3";
+import carti2 from "./midi/didItAgain.mp3";
 
 class App extends React.Component {
   state = {
@@ -29,6 +30,12 @@ class App extends React.Component {
         title: "alot on my mind",
         artist: "playboi carti",
         url: carti
+      },
+      {
+        id: 4,
+        title: "did it again",
+        artist: "playboi carti",
+        url: carti2
       }
     ]
   };
@@ -86,7 +93,7 @@ class App extends React.Component {
           tabIndex="1"
         >
           <div id="accentLine">
-            <div className="Current-track">pop 5</div>
+            <div className="Current-track"></div>
             <div className="Player-header">
               <div id="title">{this.state.title}</div>
               <div id="artist">{this.state.artist}</div>
